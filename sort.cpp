@@ -25,13 +25,3 @@ void sort(std::vector<int>& v) {
         for (int j = i; j > 0; --j)
             order(v[j - 1], v[j]);
 }
-
-
-
-
-
-
-
-
-
-
