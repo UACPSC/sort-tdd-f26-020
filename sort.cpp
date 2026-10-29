@@ -21,17 +21,17 @@ namespace {
 // sort the entire vector in place in ascending order
 void sort(std::vector<int>& v) {
 
-    if (v.empty())
-        return;
-
-    if (v.size() == 1)
-        return;
-
-    order(v[0], v[1]);
-
-    if (v.size() == 2)
-        return;
-
-    order(v[1], v[2]);
-    order(v[0], v[1]);
+    for (std::size_t i = 1; i < v.size(); ++i)
+        for (int j = i; j > 0; --j)
+            order(v[j - 1], v[j]);
 }
+
+
+
+
+
+
+
+
+
+
